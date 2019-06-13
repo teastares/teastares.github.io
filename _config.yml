@@ -1,7 +1,7 @@
 title: Yourteast
 description: "home of teast"
 author:
-  name: "Teast"
+  name: "teast ares"
   email: "teast@yourteast.com"
   url: "https://teastares.github.io/"
 
@@ -28,5 +28,5 @@ plugins:
   - jekyll-sitemap
 
 # Custom variables
-owner : "SomeHacker"
+owner : "teast"
 year : "2019"
