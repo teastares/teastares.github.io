@@ -1,15 +1,15 @@
 ---
-title: defaultdict和pickle的冲突
+title: the conflict between defaultdict and pickle
 published: true
 ---
 
-collections.defaultdict和pickle竟然有冲突，这两个可都是Python的内置模块。
+It is very ridiculous to find the conflict between defaultdict and pickle, both of them are the build-in packages in Python.
 
-找到了两个解决方案：
+I found two solutions to solve the conflict.
 
-# 解决方案一：改用dill
+# Solution 1: use "dill"
 
-参考[stackoverflow](https://stackoverflow.com/questions/35603979/pickling-defaultdict-with-lambda)上的回答，在冲突发生时，可以不用pickle，改用dill。
+Refer to the answer from [stackoverflow](https://stackoverflow.com/questions/35603979/pickling-defaultdict-with-lambda), we can use dill instead of pickle.
 
 ```
 # From pickle to dill
@@ -30,9 +30,11 @@ collections.defaultdict和pickle竟然有冲突，这两个可都是Python的内
 >>>
 ```
 
-# 解决方案二：构造一个DefaultDict类
+# Solution 2：Design a new DefaultDict class
 
-multiprocess使用了pickle管理多进程的内存，没办法，必须用pickle的场景，只好自己构造一个DefaultDict了。
+In some situations we must use pickle, e.g. you have to use multiprocess and multiprocess use pickle to manage the memory between processes.
+
+So we have to design a new DefaultDict class.
 
 ```
 class DefaultDict(dict):
