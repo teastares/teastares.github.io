@@ -1,9 +1,9 @@
-title: Hacker-Blog
-description: "A Jekyll Blog Theme For Hackers"
+title: Yourteast
+description: "home of teast"
 author:
-  name: "SomeHacker"
-  email: "someone@somewebsite.somedomain"
-  url: "https://ashishchaudhary.in/hacker-blog"
+  name: "Teast"
+  email: "teast@yourteast.com"
+  # url: "https://ashishchaudhary.in/hacker-blog"
 
 baseurl: /
 
@@ -29,4 +29,4 @@ plugins:
 
 # Custom variables
 owner : "SomeHacker"
-year : "2018"
+year : "2019"
